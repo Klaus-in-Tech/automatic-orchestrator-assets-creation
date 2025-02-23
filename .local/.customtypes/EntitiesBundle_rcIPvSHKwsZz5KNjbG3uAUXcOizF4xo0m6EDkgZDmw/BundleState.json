@@ -1,0 +1,13 @@
+{
+  "assemblyStates": {
+    "DeserializeJSON0553e.uQdVE42IYZM1RGu9r3Bh0794": {
+      "namespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON0553e3.Bundle",
+      "providerName": "CustomEntities",
+      "key": {
+        "name": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON0553e3",
+        "hash": "MTczMTkxMzQzOQ",
+        "assemblyName": "DeserializeJSON0553e.uQdVE42IYZM1RGu9r3Bh0794"
+      }
+    }
+  }
+}
