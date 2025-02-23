@@ -244,7 +244,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1276,1969" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1276,1855" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="packagePath" />
     </Sequence.Variables>
@@ -254,7 +254,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Automatic creation of assets" sap:VirtualizedContainerService.HintSize="549,1915" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Automatic creation of assets" sap:VirtualizedContainerService.HintSize="549,1801" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="Result" />
         <Variable x:TypeArguments="njl:JObject" Name="JObject" />
@@ -282,12 +282,18 @@
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
               </ui:HttpClient.Cookies>
               <ui:HttpClient.Headers>
-                <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-TenantName">DefaultTenant</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-TenantName">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
               </ui:HttpClient.Headers>
               <ui:HttpClient.Parameters>
                 <InArgument x:TypeArguments="x:String" x:Key="grant_type">refresh_token</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="refresh_token">tScW3VV7BrYnaBDdRH-aEAdddE6qOVynDrsAcwXWPSBwS</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="client_id">8DEv1AMNXczW3y4U15LL3jYf62jK93n5</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="refresh_token">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="client_id">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
               </ui:HttpClient.Parameters>
               <ui:HttpClient.UrlSegments>
                 <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
@@ -319,58 +325,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadRange>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="515,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-        <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,153" sap2010:WorkflowViewState.IdRef="Sequence_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://cloud.uipath.com/flyhub/Klaus/orchestrator_/odata/Assets" sap:VirtualizedContainerService.HintSize="416,93" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" OAuth2Token="[access_token]" Result="[Result]" StatusCode="[HttpStatus]" TimeoutMS="6000">
-              <ui:HttpClient.Attachments>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Attachments>
-              <ui:HttpClient.Cookies>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.Cookies>
-              <ui:HttpClient.Headers>
-                <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-OrganizationUnitId">
-                  <Literal x:TypeArguments="x:String">4572535</Literal>
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Authorization">
-                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="string.Format(&quot;Bearer {0}&quot;,access_token)" />
-                </InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Content-Type">
-                  <Literal x:TypeArguments="x:String">application/json</Literal>
-                </InArgument>
-              </ui:HttpClient.Headers>
-              <ui:HttpClient.Parameters>
-                <InArgument x:TypeArguments="x:String" x:Key="Name">[CurrentRow("Asset Name").ToString]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="ValueScope">Text</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="ValueType">Global</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="StringValue">[CurrentRow("Asset Value").ToString]</InArgument>
-              </ui:HttpClient.Parameters>
-              <ui:HttpClient.UrlSegments>
-                <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-              </ui:HttpClient.UrlSegments>
-            </ui:HttpClient>
-          </Sequence>
-        </ui:CommentOut.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:CommentOut>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dTAssets]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="515,1567" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dTAssets]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="515,1510" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,1396" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,1339" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Int32" Name="HttpStatus" />
                 <Variable x:TypeArguments="x:String" Name="payLoad" />
@@ -443,45 +404,6 @@
                   </Sequence>
                 </TryCatch.Finally>
               </TryCatch>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                <ui:CommentOut.Body>
-                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,153" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://cloud.uipath.com/flyhub/Klaus/orchestrator_/odata/Assets" sap:VirtualizedContainerService.HintSize="416,93" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" OAuth2Token="[access_token]" Result="[Result]" StatusCode="[HttpStatus]" TimeoutMS="6000">
-                      <ui:HttpClient.Attachments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Attachments>
-                      <ui:HttpClient.Cookies>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.Cookies>
-                      <ui:HttpClient.Headers>
-                        <InArgument x:TypeArguments="x:String" x:Key="X-UIPATH-OrganizationUnitId">4572535</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Authorization">Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUTkVOMEl5T1RWQk1UZEVRVEEzUlRZNE16UkJPVU00UVRRM016TXlSalUzUmpnMk4wSTBPQSJ9.eyJodHRwczovL3VpcGF0aC9lbWFpbCI6ImtrYWxsYW4wN0BnbWFpbC5jb20iLCJodHRwczovL3VpcGF0aC9lbWFpbF92ZXJpZmllZCI6dHJ1ZSwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LnVpcGF0aC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEzMDQ3MTU0MzYxMzY4MjEwMzYiLCJhdWQiOlsiaHR0cHM6Ly9vcmNoZXN0cmF0b3IuY2xvdWQudWlwYXRoLmNvbSIsImh0dHBzOi8vdWlwYXRoLmV1LmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE3NDAzMTIyODUsImV4cCI6MTc0MDM5ODY4NSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBvZmZsaW5lX2FjY2VzcyIsImF6cCI6IjhERXYxQU1OWGN6VzN5NFUxNUxMM2pZZjYyaks5M241In0.JZmxoyUs1WLzqt-UtvctI1WUMp3h6DUQcVUlfCvETuoKEvFrv0mmmcV_NQrRkIsTr5NYGaTmznxzUycW5gYnNfWn5drznZmQi9T1_wS7rhI9r5ftVFQB2xjRxg0THO0WII5lb2C-P27Wjfi6rLntsOMDBleoAAiwpLRgQFY-1YgvPgFa034Ry-iZsEa_LhFut6_fBYphCM_v1szWl7y6wLC_HR6Ist7mMG8Aa5Fb8T1-9kiS2H4xmukYryL7sdb-6x9vf8Xsw6MmjUPWCoK7I2sEVYwVo-6Ni1HjgvhhfhovrmSZbFo3PkPmAhEd6CIf8B5Gsv5jszmQ8c9vYkGzWw</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">application/json</InArgument>
-                      </ui:HttpClient.Headers>
-                      <ui:HttpClient.Parameters>
-                        <InArgument x:TypeArguments="x:String" x:Key="Name">Test</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ValueScope">Text</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="ValueType">Global</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="StringValue">tesjadhhakj</InArgument>
-                      </ui:HttpClient.Parameters>
-                      <ui:HttpClient.UrlSegments>
-                        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-                      </ui:HttpClient.UrlSegments>
-                    </ui:HttpClient>
-                  </Sequence>
-                </ui:CommentOut.Body>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:CommentOut>
               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,122" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[HttpStatus.ToString]" />
               <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="479,113" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[Result.ToString]" />
             </Sequence>
